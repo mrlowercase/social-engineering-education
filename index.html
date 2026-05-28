@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Engineering in Cybersecurity — Educational Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-icon">🔐</span>
+        <span class="brand-text">SE<span class="brand-accent">Cyber</span>Ed</span>
+      </a>
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#discussion" class="nav-link">Discussion</a></li>
+          <li><a href="#articles" class="nav-link">Articles</a></li>
+          <li><a href="#reflection" class="nav-link">Reflection</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#references" class="nav-link">References</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+          <div class="theme-toggle-track">
+            <div class="theme-toggle-thumb">
+              <span class="moon-icon">🌙</span>
+              <span class="sun-icon">☀️</span>
+            </div>
+          </div>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HOME SECTION ===== -->
+    <section id="home" class="section section-home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">Cybersecurity Education</div>
+          <h1 class="hero-title">
+            Understanding<br />
+            <span class="gradient-text">Social Engineering</span><br />
+            in Cybersecurity
+          </h1>
+          <p class="hero-subtitle">
+            A comprehensive academic resource on psychological manipulation tactics used by cybercriminals,
+            human vulnerabilities, and evidence-based strategies for protection.
+          </p>
+          <div class="hero-cta">
+            <a href="#discussion" class="btn btn-primary">Explore the Discussion</a>
+            <a href="#articles" class="btn btn-outline">View Scholarly Articles</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="hero-illus-wrap">
+            <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="illus-svg" aria-hidden="true">
+              <!-- Shield base -->
+              <path d="M210 30 L340 80 L340 200 C340 280 210 340 210 340 C210 340 80 280 80 200 L80 80 Z" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.4)" stroke-width="2"/>
+              <!-- Shield inner -->
+              <path d="M210 65 L310 105 L310 200 C310 262 210 310 210 310 C210 310 110 262 110 200 L110 105 Z" fill="rgba(59,130,246,0.05)" stroke="rgba(59,130,246,0.25)" stroke-width="1.5"/>
+              <!-- Lock body -->
+              <rect x="183" y="185" width="54" height="44" rx="6" fill="rgba(59,130,246,0.7)" stroke="#3b82f6" stroke-width="1.5"/>
+              <!-- Lock shackle -->
+              <path d="M196 185 L196 168 C196 155 224 155 224 168 L224 185" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <!-- Lock keyhole -->
+              <circle cx="210" cy="204" r="5" fill="#0f172a"/>
+              <rect x="207" y="204" width="6" height="10" rx="2" fill="#0f172a"/>
+              <!-- Network nodes -->
+              <circle cx="80" cy="120" r="8" fill="rgba(6,182,212,0.6)" stroke="#06b6d4" stroke-width="1.5"/>
+              <circle cx="340" cy="120" r="8" fill="rgba(6,182,212,0.6)" stroke="#06b6d4" stroke-width="1.5"/>
+              <circle cx="60" cy="240" r="6" fill="rgba(139,92,246,0.5)" stroke="#8b5cf6" stroke-width="1.5"/>
+              <circle cx="360" cy="240" r="6" fill="rgba(139,92,246,0.5)" stroke="#8b5cf6" stroke-width="1.5"/>
+              <circle cx="130" cy="320" r="5" fill="rgba(59,130,246,0.5)" stroke="#3b82f6" stroke-width="1.5"/>
+              <circle cx="290" cy="320" r="5" fill="rgba(59,130,246,0.5)" stroke="#3b82f6" stroke-width="1.5"/>
+              <!-- Connection lines -->
+              <line x1="80" y1="120" x2="110" y2="105" stroke="rgba(6,182,212,0.3)" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="340" y1="120" x2="310" y2="105" stroke="rgba(6,182,212,0.3)" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="60" y1="240" x2="110" y2="200" stroke="rgba(139,92,246,0.25)" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="360" y1="240" x2="310" y2="200" stroke="rgba(139,92,246,0.25)" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="130" y1="320" x2="160" y2="290" stroke="rgba(59,130,246,0.25)" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="290" y1="320" x2="260" y2="290" stroke="rgba(59,130,246,0.25)" stroke-width="1" stroke-dasharray="4 3"/>
+              <!-- Floating data bits -->
+              <rect x="40" y="160" width="18" height="8" rx="2" fill="rgba(59,130,246,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+              <rect x="362" y="160" width="18" height="8" rx="2" fill="rgba(59,130,246,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+              <rect x="155" y="345" width="18" height="8" rx="2" fill="rgba(6,182,212,0.2)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+              <rect x="247" y="345" width="18" height="8" rx="2" fill="rgba(6,182,212,0.2)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+            </svg>
+            <div class="illus-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="overview-cards">
+          <div class="overview-card">
+            <div class="card-icon">🧠</div>
+            <h3>Psychological Manipulation</h3>
+            <p>
+              Social engineering is a category of cyberattack that exploits human psychology rather than
+              technical vulnerabilities. Attackers craft scenarios designed to trigger predictable emotional
+              and cognitive responses, bypassing even the most sophisticated technical defenses.
+            </p>
+          </div>
+          <div class="overview-card">
+            <div class="card-icon">⚠️</div>
+            <h3>The Human Vulnerability</h3>
+            <p>
+              Security researchers and practitioners widely regard human behavior as one of the weakest
+              links in any cybersecurity system. No firewall or encryption scheme can fully compensate
+              for an employee who has been deceived into surrendering credentials or granting access.
+            </p>
+          </div>
+          <div class="overview-card">
+            <div class="card-icon">🎭</div>
+            <h3>Emotional Exploitation</h3>
+            <p>
+              Attackers deliberately manipulate core human emotions — <strong>trust</strong>,
+              <strong>fear</strong>, <strong>urgency</strong>, <strong>authority</strong>, and
+              <strong>curiosity</strong> — to lower a target's critical thinking and induce hasty,
+              unverified actions such as clicking malicious links or disclosing sensitive information.
+            </p>
+          </div>
+          <div class="overview-card">
+            <div class="card-icon">🛡️</div>
+            <h3>Why Awareness Matters</h3>
+            <p>
+              Education and awareness training remain the most effective countermeasures against social
+              engineering. Understanding attacker tactics empowers individuals and organizations to
+              recognize manipulation attempts before they result in a security breach.
+            </p>
+          </div>
+        </div>
+
+        <div class="stat-bar">
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">of cyberattacks rely on social engineering</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">$4.5B+</span>
+            <span class="stat-label">in annual losses attributed to phishing alone (FBI IC3)</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">#1</span>
+            <span class="stat-label">human error ranked as top cybersecurity risk factor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DISCUSSION SECTION ===== -->
+    <section id="discussion" class="section section-discussion">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Discussion</span>
+          <h2 class="section-title">How Social Engineering Works</h2>
+          <p class="section-intro">
+            Social engineering attacks exploit the fundamental human tendency to trust, comply with authority,
+            and respond to urgency. Unlike technical exploits that target software flaws, these attacks target
+            cognitive biases and emotional responses, making them effective against individuals at every level
+            of technical sophistication.
+          </p>
+        </div>
+
+        <!-- Why Effective -->
+        <div class="discussion-block">
+          <h3 class="block-title"><span class="block-num">01</span> Why Social Engineering Is Effective</h3>
+          <div class="block-content two-col">
+            <div>
+              <p>
+                The effectiveness of social engineering stems from its exploitation of well-documented
+                psychological principles. Cialdini's principles of influence — reciprocity, commitment,
+                social proof, authority, liking, and scarcity — are routinely weaponized by attackers
+                to manufacture compliance without arousing suspicion (Wang et al., 2021).
+              </p>
+              <p>
+                Cognitive load also plays a critical role. When individuals are busy, stressed, or
+                distracted, their capacity for critical evaluation diminishes. Attackers deliberately
+                create time pressure and emotional arousal to exploit this reduced vigilance.
+              </p>
+            </div>
+            <div>
+              <p>
+                Furthermore, organizational trust hierarchies are frequently abused. An email appearing
+                to originate from a CEO or IT department carries implicit authority that many employees
+                are conditioned to obey without verification. This phenomenon, known as authority bias,
+                is one of the most consistently exploited vectors in corporate environments.
+              </p>
+              <p>
+                The asymmetry between attacker and defender is stark: an attacker needs to succeed only
+                once, while defenders must maintain vigilance continuously across every employee and
+                every interaction.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attack Methods -->
+        <div class="discussion-block">
+          <h3 class="block-title"><span class="block-num">02</span> Attack Methods</h3>
+          <p class="block-intro">
+            The following attack methods represent the most prevalent and well-documented forms of
+            social engineering encountered in both academic literature and real-world incident reports.
+          </p>
+          <div class="attack-grid">
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">📧</span>
+                <h4>Phishing</h4>
+              </div>
+              <p class="attack-def">
+                Mass-distributed fraudulent communications — typically email — designed to appear
+                legitimate and trick recipients into revealing credentials, clicking malicious links,
+                or downloading malware.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> An employee receives an email appearing to be from their
+                bank's fraud department, warning of suspicious activity and directing them to a
+                spoofed login page that harvests their credentials.
+              </div>
+            </div>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">🎯</span>
+                <h4>Spear Phishing</h4>
+              </div>
+              <p class="attack-def">
+                A targeted variant of phishing in which the attacker researches the victim in advance
+                and crafts a highly personalized message to increase credibility and success rate.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> A finance officer receives an email referencing a real
+                ongoing project by name, appearing to come from the CFO, requesting an urgent wire
+                transfer to a new vendor account.
+              </div>
+            </div>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">💾</span>
+                <h4>Baiting</h4>
+              </div>
+              <p class="attack-def">
+                An attack that lures victims with the promise of something enticing — free software,
+                media, or a found USB drive — which delivers malware upon interaction.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> A USB drive labeled "Q3 Salary Review — Confidential" is
+                left in a company parking lot. A curious employee plugs it into a workstation,
+                executing embedded malware that establishes a remote access backdoor.
+              </div>
+            </div>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">🎭</span>
+                <h4>Pretexting</h4>
+              </div>
+              <p class="attack-def">
+                The creation of a fabricated scenario (pretext) to extract information or gain access.
+                The attacker assumes a false identity — IT support, auditor, vendor — to establish
+                trust before making their request.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> An attacker calls an HR department posing as a payroll
+                auditor, citing a regulatory compliance review, and requests employee Social Security
+                numbers and direct deposit information.
+              </div>
+            </div>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">📞</span>
+                <h4>Vishing</h4>
+              </div>
+              <p class="attack-def">
+                Voice phishing conducted via telephone or VoIP. Attackers impersonate trusted
+                entities such as banks, government agencies, or technical support to extract
+                sensitive information verbally.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> A victim receives a call from someone claiming to be
+                IRS enforcement, stating that an arrest warrant has been issued and demanding
+                immediate payment via gift cards to avoid prosecution.
+              </div>
+            </div>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">🚨</span>
+                <h4>Scareware</h4>
+              </div>
+              <p class="attack-def">
+                Malicious software or deceptive pop-up messages that frighten users into believing
+                their system is infected or compromised, prompting them to purchase fake security
+                software or call fraudulent support numbers.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> A browser pop-up displays a full-screen alert mimicking
+                a Windows security warning, claiming the computer is infected and instructing the
+                user to call a toll-free number where attackers gain remote access.
+              </div>
+            </div>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <span class="attack-icon">🚪</span>
+                <h4>Tailgating</h4>
+              </div>
+              <p class="attack-def">
+                A physical social engineering technique in which an unauthorized individual gains
+                access to a restricted area by following closely behind an authorized person,
+                exploiting social courtesy and the reluctance to challenge others.
+              </p>
+              <div class="attack-example">
+                <strong>Example:</strong> An attacker dressed in a delivery uniform approaches a
+                secured office entrance carrying boxes, and an employee holds the door open out of
+                politeness, granting the attacker unescorted access to the building.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Consequences -->
+        <div class="discussion-block">
+          <h3 class="block-title"><span class="block-num">03</span> Consequences of Social Engineering Attacks</h3>
+          <p class="block-intro">
+            The impact of successful social engineering attacks extends far beyond the immediate incident,
+            creating cascading consequences for individuals, organizations, and broader society.
+          </p>
+          <div class="consequence-list">
+            <div class="consequence-item">
+              <span class="consequence-icon">🪪</span>
+              <div>
+                <h4>Identity Theft</h4>
+                <p>Attackers use harvested personal information to assume a victim's identity, opening fraudulent accounts, filing false tax returns, or committing crimes in the victim's name.</p>
+              </div>
+            </div>
+            <div class="consequence-item">
+              <span class="consequence-icon">🔑</span>
+              <div>
+                <h4>Credential Compromise</h4>
+                <p>Stolen usernames and passwords enable unauthorized access to email, banking, corporate systems, and cloud services, often serving as the entry point for larger breaches.</p>
+              </div>
+            </div>
+            <div class="consequence-item">
+              <span class="consequence-icon">🏢</span>
+              <div>
+                <h4>Organizational Data Breaches</h4>
+                <p>A single compromised employee account can expose entire databases of customer records, intellectual property, and confidential business information, triggering regulatory penalties and reputational damage.</p>
+              </div>
+            </div>
+            <div class="consequence-item">
+              <span class="consequence-icon">💸</span>
+              <div>
+                <h4>Financial Loss</h4>
+                <p>Business Email Compromise (BEC) and wire fraud schemes, both rooted in social engineering, resulted in over $2.9 billion in reported losses in 2023 alone, according to the FBI Internet Crime Complaint Center.</p>
+              </div>
+            </div>
+            <div class="consequence-item">
+              <span class="consequence-icon">🔒</span>
+              <div>
+                <h4>Privacy Violations</h4>
+                <p>Exposure of personal health information, financial records, and private communications causes lasting harm to victims and may violate data protection regulations such as GDPR and HIPAA.</p>
+              </div>
+            </div>
+            <div class="consequence-item">
+              <span class="consequence-icon">🚫</span>
+              <div>
+                <h4>Unauthorized Access</h4>
+                <p>Physical and logical access gained through social engineering enables attackers to install persistent malware, exfiltrate data over extended periods, or sabotage critical infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prevention -->
+        <div class="discussion-block">
+          <h3 class="block-title"><span class="block-num">04</span> Prevention Strategies</h3>
+          <p class="block-intro">
+            Effective defense against social engineering requires a layered approach combining technical
+            controls, organizational policies, and continuous human education.
+          </p>
+          <div class="prevention-grid">
+            <div class="prevention-card">
+              <div class="prev-icon">📚</div>
+              <h4>Cybersecurity Awareness Training</h4>
+              <p>Regular, scenario-based training programs that simulate real attack techniques help employees recognize manipulation attempts and respond appropriately. Simulated phishing exercises are particularly effective.</p>
+            </div>
+            <div class="prevention-card">
+              <div class="prev-icon">🔐</div>
+              <h4>Password Security</h4>
+              <p>Enforcing strong, unique passwords for every account — ideally managed through a password manager — significantly reduces the impact of credential theft from social engineering attacks.</p>
+            </div>
+            <div class="prevention-card">
+              <div class="prev-icon">📱</div>
+              <h4>Multi-Factor Authentication (MFA)</h4>
+              <p>MFA requires a second verification factor beyond a password, ensuring that stolen credentials alone are insufficient for unauthorized access. It is one of the highest-impact controls available.</p>
+            </div>
+            <div class="prevention-card">
+              <div class="prev-icon">🔍</div>
+              <h4>Zero-Trust Security</h4>
+              <p>The zero-trust model operates on the principle of "never trust, always verify," requiring continuous authentication and authorization for every user, device, and network request regardless of location.</p>
+            </div>
+            <div class="prevention-card">
+              <div class="prev-icon">🎓</div>
+              <h4>Employee Education</h4>
+              <p>Beyond formal training, fostering a security-conscious organizational culture where employees feel empowered to question unusual requests — even from apparent authority figures — is essential.</p>
+            </div>
+            <div class="prevention-card">
+              <div class="prev-icon">✅</div>
+              <h4>Verification Procedures</h4>
+              <p>Establishing clear protocols for verifying the identity of individuals requesting sensitive information or access — particularly for financial transactions and system changes — prevents pretexting and BEC attacks.</p>
+            </div>
+            <div class="prevention-card">
+              <div class="prev-icon">📨</div>
+              <h4>Email Filtering</h4>
+              <p>Advanced email security solutions that analyze sender reputation, detect spoofed domains, scan attachments for malware, and flag suspicious links provide a critical technical layer of defense against phishing.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== ARTICLES SECTION ===== -->
+    <section id="articles" class="section section-articles">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Scholarly Literature</span>
+          <h2 class="section-title">Academic Articles</h2>
+          <p class="section-intro">
+            The following peer-reviewed articles represent foundational and contemporary scholarship
+            on social engineering in cybersecurity. Each entry includes bibliographic information
+            and a summary of the work's key contributions.
+          </p>
+        </div>
+
+        <div class="articles-grid">
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-source">IEEE Access</span>
+              <span class="article-year">2021</span>
+            </div>
+            <h3 class="article-title">
+              Social Engineering in Cybersecurity: Effect Mechanisms, Human Vulnerabilities and Attack Methods
+            </h3>
+            <p class="article-authors">Wang, Z., Zhu, H., &amp; Sun, L.</p>
+            <p class="article-summary">
+              This comprehensive study published in <em>IEEE Access</em> provides a systematic analysis
+              of social engineering from three interconnected perspectives: the psychological effect
+              mechanisms that make attacks successful, the specific human vulnerabilities that attackers
+              exploit, and the technical and behavioral attack methods employed. The authors propose a
+              unified taxonomy that bridges psychological theory and cybersecurity practice, offering
+              a framework for both understanding and mitigating social engineering threats. The paper
+              is particularly valuable for its integration of cognitive psychology with information
+              security research.
+            </p>
+            <div class="article-tags">
+              <span class="tag">Psychology</span>
+              <span class="tag">Taxonomy</span>
+              <span class="tag">Attack Methods</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-source">Computers &amp; Security</span>
+              <span class="article-year">2020</span>
+            </div>
+            <h3 class="article-title">
+              Human Vulnerabilities to Social Engineering Attacks: A Systematic Literature Review for Building a Human Firewall
+            </h3>
+            <p class="article-authors">Heartfield, R., &amp; Loukas, G.</p>
+            <p class="article-summary">
+              This systematic literature review synthesizes research on the psychological and behavioral
+              factors that make individuals susceptible to social engineering attacks. The authors
+              introduce the concept of the "human firewall" — the idea that educated, vigilant individuals
+              can serve as an active layer of defense rather than merely a vulnerability. The review
+              identifies key susceptibility factors including cognitive biases, emotional states, and
+              organizational context, and maps these to evidence-based countermeasures. The paper
+              provides a rigorous foundation for designing human-centered security awareness programs.
+            </p>
+            <div class="article-tags">
+              <span class="tag">Human Factors</span>
+              <span class="tag">Literature Review</span>
+              <span class="tag">Awareness Training</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-source">Future Internet (MDPI)</span>
+              <span class="article-year">2020</span>
+            </div>
+            <h3 class="article-title">
+              Social Engineering Attacks: A Survey
+            </h3>
+            <p class="article-authors">Salahdine, F., &amp; Kaabouch, N.</p>
+            <p class="article-summary">
+              Published in <em>Future Internet</em> (MDPI), this survey provides a broad and structured
+              overview of the social engineering attack landscape. The authors categorize attacks by
+              medium (digital, physical, and socio-technical), analyze the psychological principles
+              underlying each category, and review existing detection and prevention techniques. The
+              survey also examines the evolution of social engineering in the context of emerging
+              technologies such as artificial intelligence and deepfakes, highlighting new threat
+              vectors that challenge traditional awareness-based defenses. It serves as an accessible
+              entry point for researchers new to the field.
+            </p>
+            <div class="article-tags">
+              <span class="tag">Survey</span>
+              <span class="tag">Attack Categories</span>
+              <span class="tag">Emerging Threats</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-source">Journal of Cybersecurity</span>
+              <span class="article-year">2019</span>
+            </div>
+            <h3 class="article-title">
+              A Study on the Psychology of Social Engineering-Based Cyberattacks and Existing Countermeasures
+            </h3>
+            <p class="article-authors">Mouton, F., Leenen, L., &amp; Venter, H. S.</p>
+            <p class="article-summary">
+              This study examines the psychological underpinnings of social engineering attacks with
+              particular attention to the attacker's perspective and decision-making process. The
+              authors analyze how attackers select targets, craft pretexts, and exploit specific
+              psychological vulnerabilities to maximize success rates. The paper also provides a
+              critical evaluation of existing countermeasures — including technical controls, policy
+              frameworks, and training programs — assessing their effectiveness against documented
+              attack patterns. The findings underscore the need for countermeasures that address
+              psychological susceptibility rather than relying solely on technical solutions.
+            </p>
+            <div class="article-tags">
+              <span class="tag">Psychology</span>
+              <span class="tag">Countermeasures</span>
+              <span class="tag">Attacker Behavior</span>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-source">Computers in Human Behavior</span>
+              <span class="article-year">2018</span>
+            </div>
+            <h3 class="article-title">
+              An Interdisciplinary View of Social Engineering: A Call to Action for Research
+            </h3>
+            <p class="article-authors">Krombholz, K., Hobel, H., Huber, M., &amp; Weippl, E.</p>
+            <p class="article-summary">
+              This influential paper argues that social engineering cannot be adequately understood
+              or countered through a purely technical lens, and calls for interdisciplinary research
+              drawing from psychology, sociology, organizational behavior, and communication theory.
+              The authors present a comprehensive taxonomy of social engineering attacks and map
+              each attack type to the psychological and social mechanisms it exploits. The paper
+              identifies significant gaps in the existing research literature and proposes a research
+              agenda that integrates human and technical perspectives. It has been widely cited as
+              a foundational reference for interdisciplinary cybersecurity research.
+            </p>
+            <div class="article-tags">
+              <span class="tag">Interdisciplinary</span>
+              <span class="tag">Taxonomy</span>
+              <span class="tag">Research Agenda</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REFLECTION SECTION ===== -->
+    <section id="reflection" class="section section-reflection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Personal Reflection</span>
+          <h2 class="section-title">Reflections on Cybersecurity Awareness</h2>
+          <p class="section-intro">A formal reflection by Arvel Bon Dagcuta, BSIT 3rd Year Student</p>
+        </div>
+
+        <div class="reflection-glass">
+          <div class="reflection-body">
+          <div class="reflection-paragraph">
+            <span class="para-num">I</span>
+            <div class="para-text">
+              <p>
+                The study of social engineering has fundamentally reshaped my understanding of what
+                cybersecurity truly means. Prior to engaging with this subject in depth, I held a
+                predominantly technical conception of digital security — one centered on firewalls,
+                encryption protocols, and software vulnerabilities. What the literature on social
+                engineering reveals, however, is that the most consequential security failures are
+                rarely the result of technical inadequacy alone. They are, more often, the product
+                of human decisions made under conditions of deception, stress, and misplaced trust.
+                This realization underscores the critical importance of cybersecurity awareness as
+                a discipline in its own right — one that must be cultivated continuously, not merely
+                addressed through a one-time training module. In an era where digital systems are
+                deeply embedded in every aspect of personal and professional life, the ability to
+                critically evaluate communications, verify identities, and recognize manipulation
+                is not a specialized skill reserved for security professionals; it is a fundamental
+                competency for every participant in the digital world.
+              </p>
+            </div>
+          </div>
+
+          <div class="reflection-paragraph">
+            <span class="para-num">II</span>
+            <div class="para-text">
+              <p>
+                What strikes me most profoundly about social engineering is the degree to which it
+                exploits the very qualities that make us effective social beings. Trust, empathy,
+                the desire to be helpful, and deference to authority are not weaknesses in isolation —
+                they are the foundations of functional human relationships and cooperative organizations.
+                Yet these same qualities become liabilities when encountered by a skilled manipulator
+                who understands how to weaponize them. The academic literature makes clear that
+                susceptibility to social engineering is not a matter of intelligence or technical
+                literacy; highly educated and technically sophisticated individuals are routinely
+                deceived when the right emotional triggers are activated under the right circumstances.
+                This insight carries a significant implication for how we approach cybersecurity
+                education: rather than framing awareness training as a corrective for ignorance,
+                we must frame it as the cultivation of a specific form of critical vigilance — one
+                that acknowledges our inherent psychological vulnerabilities and equips us with
+                deliberate strategies for managing them in high-stakes digital interactions.
+              </p>
+            </div>
+          </div>
+
+          <div class="reflection-paragraph">
+            <span class="para-num">III</span>
+            <div class="para-text">
+              <p>
+                The most enduring lesson I have drawn from this study is that cybersecurity is,
+                at its core, a human problem that demands human solutions. Technical controls —
+                multi-factor authentication, email filtering, zero-trust architectures — are
+                indispensable, but they are insufficient without a parallel investment in human
+                judgment and organizational culture. Responsible internet usage is not simply a
+                matter of following rules; it requires the development of a questioning mindset,
+                a habit of verification, and the confidence to challenge requests that feel
+                anomalous even when they appear to come from trusted sources. As a student of
+                Information Technology, I recognize that the professionals we become will bear
+                responsibility not only for building and maintaining secure systems, but for
+                educating the users of those systems. The work of creating a more secure digital
+                environment is inseparable from the work of building a more critically informed
+                society — and that work begins with education, exactly as this project has
+                attempted to demonstrate.
+              </p>
+            </div>
+          </div>
+        </div><!-- end reflection-glass -->
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="section section-about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About the Creator</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-avatar">
+            <div class="avatar-circle">
+              <img src="../dagcuta.jpg" alt="Arvel Bon Dagcuta" class="avatar-photo" />
+            </div>
+            <div class="avatar-ring" aria-hidden="true"></div>
+          </div>
+          <div class="about-content">
+            <h3 class="about-name">Arvel Bon Dagcuta</h3>
+            <p class="about-title">Bachelor of Science in Information Technology — 3rd Year Student</p>
+
+            <p class="about-bio">
+              I am a third-year Bachelor of Science in Information Technology student with a strong
+              academic and personal interest in the intersection of technology, security, and human
+              behavior. My coursework and independent research have led me to develop a particular
+              focus on cybersecurity — a field I find compelling not only for its technical depth,
+              but for the critical role it plays in protecting individuals and organizations in an
+              increasingly connected world.
+            </p>
+            <p class="about-bio">
+              This educational website was developed as both an academic exercise and a genuine
+              contribution to public cybersecurity literacy. I believe that informed users are the
+              most effective defense against social engineering attacks, and I am committed to
+              communicating complex security concepts in a clear, accessible, and evidence-based
+              manner.
+            </p>
+
+            <div class="about-interests">
+              <h4>Areas of Interest</h4>
+              <div class="interest-tags">
+                <span class="interest-tag">🔐 Cybersecurity</span>
+                <span class="interest-tag">💻 Web Development</span>
+                <span class="interest-tag">🔬 Academic Research</span>
+                <span class="interest-tag">🌐 Networking &amp; Infrastructure</span>
+                <span class="interest-tag">📊 Data Privacy</span>
+                <span class="interest-tag">🤖 Emerging Technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REFERENCES SECTION ===== -->
+    <section id="references" class="section section-references">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">APA 7th Edition</span>
+          <h2 class="section-title">References</h2>
+          <p class="section-intro">
+            All sources cited in this website are listed below in APA 7th edition format,
+            arranged alphabetically by first author's last name.
+          </p>
+        </div>
+
+        <div class="references-list">
+
+          <div class="reference-item">
+            <span class="ref-num">1</span>
+            <p class="ref-text">
+              Heartfield, R., &amp; Loukas, G. (2020). Human vulnerabilities to social engineering attacks:
+              A systematic literature review for building a human firewall. <em>Computers &amp; Security</em>,
+              <em>96</em>, 101921. <a href="https://doi.org/10.1016/j.cose.2020.101921" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.cose.2020.101921</a>
+            </p>
+          </div>
+
+          <div class="reference-item">
+            <span class="ref-num">2</span>
+            <p class="ref-text">
+              Krombholz, K., Hobel, H., Huber, M., &amp; Weippl, E. (2018). An interdisciplinary view of
+              social engineering: A call to action for research. <em>Computers in Human Behavior</em>,
+              <em>80</em>, 38–45. <a href="https://doi.org/10.1016/j.chb.2017.10.048" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.chb.2017.10.048</a>
+            </p>
+          </div>
+
+          <div class="reference-item">
+            <span class="ref-num">3</span>
+            <p class="ref-text">
+              Mouton, F., Leenen, L., &amp; Venter, H. S. (2019). A study on the psychology of
+              social engineering-based cyberattacks and existing countermeasures. <em>Journal of
+              Cybersecurity</em>, <em>5</em>(1), tyz007.
+              <a href="https://doi.org/10.1093/cybsec/tyz007" target="_blank" rel="noopener noreferrer">https://doi.org/10.1093/cybsec/tyz007</a>
+            </p>
+          </div>
+
+          <div class="reference-item">
+            <span class="ref-num">4</span>
+            <p class="ref-text">
+              Salahdine, F., &amp; Kaabouch, N. (2020). Social engineering attacks: A survey.
+              <em>Future Internet</em>, <em>11</em>(4), 89.
+              <a href="https://doi.org/10.3390/fi11040089" target="_blank" rel="noopener noreferrer">https://doi.org/10.3390/fi11040089</a>
+            </p>
+          </div>
+
+          <div class="reference-item">
+            <span class="ref-num">5</span>
+            <p class="ref-text">
+              Wang, Z., Zhu, H., &amp; Sun, L. (2021). Social engineering in cybersecurity: Effect
+              mechanisms, human vulnerabilities and attack methods. <em>IEEE Access</em>, <em>9</em>,
+              11895–11910.
+              <a href="https://doi.org/10.1109/ACCESS.2021.3051633" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/ACCESS.2021.3051633</a>
+            </p>
+          </div>
+
+          <div class="reference-item">
+            <span class="ref-num">6</span>
+            <p class="ref-text">
+              Federal Bureau of Investigation. (2023). <em>Internet Crime Report 2023</em>. Internet
+              Crime Complaint Center (IC3).
+              <a href="https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf" target="_blank" rel="noopener noreferrer">https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf</a>
+            </p>
+          </div>
+
+          <div class="reference-item">
+            <span class="ref-num">7</span>
+            <p class="ref-text">
+              Cialdini, R. B. (2009). <em>Influence: The psychology of persuasion</em> (Rev. ed.).
+              HarperCollins.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">🔐</span>
+        <span class="brand-text">SE<span class="brand-accent">Cyber</span>Ed</span>
+      </div>
+      <p class="footer-credit">
+        Created by <strong>Arvel Bon Dagcuta</strong> — BSIT 3rd Year Student
+      </p>
+      <p class="footer-note">
+        All content is factual, evidence-based, and academically sourced. For educational purposes only.
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
