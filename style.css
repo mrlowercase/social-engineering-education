@@ -697,7 +697,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.925rem;
   color: var(--color-text-muted);
   line-height: 1.6;
-  text-align: left;
+  text-align: left; /* Adhere to UX best practice for readability */
   text-indent: 2em;
 }
 
@@ -741,6 +741,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   max-width: 780px;
   line-height: 1.6;
+  text-align: left; /* 3-line rule: body text should be left-aligned */
 }
 
 .two-col {
@@ -1219,6 +1220,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 28px;
   }
   .hero-text { text-align: center; }
+  .hero-title { text-align: center; } /* Short punchy headline centered */
+  .hero-subtitle { text-align: left; } /* Long-form content left-aligned */
   .hero-cta { justify-content: center; }
   .hero-illustration { display: none; }
 
@@ -1230,6 +1233,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     gap: 16px;
   }
+  .about-bio { text-align: left; } /* Keep paragraphs left-aligned for readability */
   .interest-tags { justify-content: center; }
 
   .stat-bar { flex-direction: column; gap: 12px; padding: 16px 14px; }
