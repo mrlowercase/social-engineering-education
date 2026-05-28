@@ -275,14 +275,10 @@ body {
 img { max-width: 100%; display: block; }
 
 p {
-  text-align: justify;
+  text-align: left;
   text-indent: 2em;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
   overflow-wrap: break-word;
   word-spacing: normal;
-  text-align-last: left;
 }
 
 a { color: var(--color-primary-h); text-decoration: none; transition: color var(--transition); }
@@ -703,8 +699,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
   text-align: left;
   text-indent: 2em;
-  hyphens: auto;
-  -webkit-hyphens: auto;
 }
 
 /* ============================================================
