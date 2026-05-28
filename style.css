@@ -1782,11 +1782,24 @@ h1, h2, h3, h4, h5, h6 {
   .nav-menu ul { flex-direction: column; gap: 2px; }
   .nav-link { padding: 9px 12px; font-size: var(--text-sm); }
 
-  /* Hyphenation handles justify spacing — no override needed */
+  /* Restore first-line indent for all paragraphs on mobile */
 
   p {
-    text-indent: 0;
+    text-indent: 1.5em;
     line-height: 1.5;
+  }
+
+  /* Elements that should never have text-indent */
+  .stat-label,
+  .attack-example,
+  .attack-def,
+  .hero-subtitle,
+  .ref-text,
+  .footer-credit,
+  .footer-note,
+  .section-intro,
+  .block-intro {
+    text-indent: 0;
   }
 
   .hero-cta { flex-direction: column; align-items: center; gap: 10px; margin-bottom: 24px; }
