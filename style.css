@@ -665,7 +665,10 @@ h1, h2, h3, h4, h5, h6 {
    ============================================================ */
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-tag {
@@ -684,11 +687,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-size: 2.15rem;
   font-weight: 700;
   color: var(--color-white);
-  margin-bottom: 12px;
-  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  letter-spacing: -0.015em;
+  text-align: center; /* Centered for focus as per 3-line rule */
 }
 
 .section-intro {
@@ -697,7 +701,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.925rem;
   color: var(--color-text-muted);
   line-height: 1.6;
-  text-align: left; /* Adhere to UX best practice for readability */
+  text-align: left; /* Left-aligned for reading comfort (exceeds 3 lines) */
   text-indent: 2em;
 }
 
@@ -741,7 +745,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   max-width: 780px;
   line-height: 1.6;
-  text-align: left; /* 3-line rule: body text should be left-aligned */
 }
 
 .two-col {
@@ -798,16 +801,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .attack-example {
-  font-size: 0.81rem;
-  color: var(--color-text-dim);
-  background: rgba(59,130,246,0.05);
+  font-size: 0.825rem;
+  color: #CBD5E1; /* Brighter, readable off-white/gray-blue */
+  background: rgba(30, 41, 59, 0.7); /* Refined deep navy/gray-blue, ~10% lighter than base bg */
   border-left: 3px solid var(--color-primary);
-  padding: 8px 12px;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  line-height: 1.6;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-left: 3px solid var(--color-primary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  line-height: 1.65;
   text-indent: 0;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.2); /* Subtle inner shadow for premium depth */
+  margin-top: 12px;
 }
-.attack-example strong { color: var(--color-primary-h); }
+.attack-example strong { 
+  color: var(--color-primary-h);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
 
 /* Consequences */
 .consequence-list {
@@ -1220,8 +1233,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 28px;
   }
   .hero-text { text-align: center; }
-  .hero-title { text-align: center; } /* Short punchy headline centered */
-  .hero-subtitle { text-align: left; } /* Long-form content left-aligned */
+  .hero-subtitle { text-align: left; } /* Keep paragraphs left-aligned for readability */
   .hero-cta { justify-content: center; }
   .hero-illustration { display: none; }
 
