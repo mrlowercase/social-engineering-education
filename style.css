@@ -56,50 +56,58 @@
 
 /* Light Mode Overrides — Soft Gray Academic Theme */
 [data-theme="light"] {
-  --color-bg:          #F1F5F9; /* Soft Gray Base */
-  --color-bg-2:        #E2E8F0; /* Layered Gray for Hierarchy */
-  --color-bg-3:        #CBD5E1; /* Muted Contrast */
-  --color-surface:     #F8FAFC; /* Slightly Lighter Surface */
-  --color-surface-2:   #F1F5F9; 
-  --color-border:      #CBD5E1;
-  --color-border-h:    #94A3B8;
+  --color-bg:          #F8FAFC; /* Soft White Base */
+  --color-bg-2:        #F1F5F9; /* Brighter Secondary Background */
+  --color-bg-3:        #E2E8F0; /* Muted Contrast */
+  --color-surface:     #FFFFFF; /* Clean White Surface */
+  --color-surface-2:   #F8FAFC; 
+  --color-border:      #E2E8F0;
+  --color-border-h:    #CBD5E1;
 
-  --color-primary:     #334155; /* Slate 700 - Professional Dark */
-  --color-primary-h:   #0F172A; /* Deep Navy */
-  --color-primary-dim: rgba(51, 65, 85, 0.05);
-  --color-accent:      #2563EB; /* Vibrant Blue for Call-to-actions */
+  --color-primary:     #1E293B; /* Deep Slate - Professional Dark for High Contrast */
+  --color-primary-h:   #0F172A; /* Dark Navy */
+  --color-primary-dim: rgba(30, 41, 59, 0.04);
+  --color-accent:      #0284C7; /* Professional Blue */
   --color-accent-2:    #475569;
 
-  --color-text:        #0F172A; /* Deep Slate (Heading) */
-  --color-text-muted:  #475569; /* Slate 600 (Body) */
-  --color-text-dim:    #64748B; /* Slate 500 */
+  --color-text:        #0F172A; /* Dark Navy (Heading) for strong contrast */
+  --color-text-muted:  #334155; /* Slate 700 (Body) for high readability */
+  --color-text-dim:    #475569; /* Slate 600 */
   --color-white:       #0F172A;
 
-  --shadow-sm:   0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md:   0 4px 6px -1px rgba(0,0,0,0.03), 0 2px 4px -1px rgba(0,0,0,0.02);
-  --shadow-lg:   0 10px 15px -3px rgba(0,0,0,0.03), 0 4px 6px -2px rgba(0,0,0,0.02);
-  --shadow-blue: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.05);
+  --shadow-lg:   0 10px 25px rgba(0,0,0,0.05);
+  --shadow-blue: 0 4px 14px rgba(2, 132, 199, 0.08);
+
+  --glass-bg:          rgba(255, 255, 255, 0.85); /* Opaque frosted white */
+  --glass-border:      rgba(226, 232, 240, 0.8);
 }
 
 [data-theme="light"] .navbar {
-  background: rgba(241, 245, 249, 0.85);
+  background: rgba(248, 250, 252, 0.85);
   border-bottom: 1px solid var(--color-border);
 }
 
 [data-theme="light"] .navbar.scrolled {
-  background: rgba(241, 245, 249, 0.98);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 [data-theme="light"] .hero-grid {
-  opacity: 0.15;
+  opacity: 0.1;
   background-image:
-    linear-gradient(#CBD5E1 1px, transparent 1px),
-    linear-gradient(90deg, #CBD5E1 1px, transparent 1px);
+    linear-gradient(#E2E8F0 1px, transparent 1px),
+    linear-gradient(90deg, #E2E8F0 1px, transparent 1px);
+}
+
+[data-theme="light"] .section::before {
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(148, 163, 184, 0.08) 1px, transparent 0);
 }
 
 [data-theme="light"] .reflection-glass {
-  background: #F8FAFC;
-  border-color: var(--color-border);
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
 }
 
 [data-theme="light"] .para-text p {
@@ -123,7 +131,7 @@
 
 [data-theme="light"] .btn-primary {
   background: #0F172A;
-  color: #F1F5F9;
+  color: #F8FAFC;
 }
 
 [data-theme="light"] .btn-primary:hover {
@@ -133,11 +141,11 @@
 [data-theme="light"] .btn-outline {
   background: transparent;
   border-color: var(--color-border);
-  color: #475569;
+  color: var(--color-text-muted);
 }
 
 [data-theme="light"] .btn-outline:hover {
-  background: #E2E8F0;
+  background: #F1F5F9;
   border-color: var(--color-border-h);
 }
 
@@ -149,7 +157,7 @@
 [data-theme="light"] .interest-tag,
 [data-theme="light"] .reference-item,
 [data-theme="light"] .stat-bar {
-  background: #F8FAFC;
+  background: #FFFFFF;
   border: 1px solid var(--color-border);
 }
 
@@ -162,44 +170,98 @@
 }
 
 [data-theme="light"] .attack-example {
-  background: #F1F5F9;
-  border-left-color: #94A3B8;
-  color: #475569;
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+  color: var(--color-text-muted);
 }
 
 [data-theme="light"] .article-source {
-  background: #E2E8F0;
+  background: #F1F5F9;
   border-color: var(--color-border);
-  color: #475569;
+  color: var(--color-accent);
 }
 
 [data-theme="light"] .tag {
-  background: #F1F5F9;
+  background: #F8FAFC;
   border-color: var(--color-border);
-  color: #475569;
+  color: var(--color-text-muted);
 }
 
 [data-theme="light"] .para-num {
-  background: #E2E8F0;
+  background: #F1F5F9;
   border-color: var(--color-border);
-  color: #475569;
+  color: var(--color-text-dim);
 }
 
 [data-theme="light"] .site-footer {
-  background: #F1F5F9;
+  background: #F8FAFC;
 }
 
 [data-theme="light"] .nav-menu {
-  background: rgba(241, 245, 249, 0.98);
+  background: rgba(248, 250, 252, 0.98);
 }
 
 [data-theme="light"] .theme-toggle-track {
-  background-color: #E2E8F0;
-  border-color: #CBD5E1;
+  background-color: #F1F5F9;
+  border-color: #E2E8F0;
 }
 
 [data-theme="light"] .theme-toggle-thumb {
   background-color: #FFFFFF;
+}
+
+[data-theme="light"] .about-layout {
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+}
+
+[data-theme="light"] .avatar-circle {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+[data-theme="light"] .avatar-ring {
+  border-color: rgba(2, 132, 199, 0.15);
+}
+
+[data-theme="light"] .interest-tag {
+  background: #F1F5F9;
+  border-color: #E2E8F0;
+  color: var(--color-text-muted);
+}
+
+[data-theme="light"] .interest-tag:hover {
+  background: #FFFFFF;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+[data-theme="light"] .section-title::after {
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  box-shadow: 0 0 5px var(--color-accent);
+}
+
+[data-theme="light"] .section-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.03) 0%, transparent 70%);
+}
+
+[data-theme="light"] .block-title::after {
+  background: var(--color-accent);
+  box-shadow: 0 0 5px var(--color-accent);
+}
+
+[data-theme="light"] .section-tag {
+  background: rgba(2, 132, 199, 0.05);
+  border-color: rgba(2, 132, 199, 0.2);
+  color: var(--color-accent);
+}
+
+[data-theme="light"] .section-tag::before, [data-theme="light"] .section-tag::after {
+  border-color: var(--color-accent);
+}
+
+[data-theme="light"] .about-title {
+  color: var(--color-accent);
 }
 
 /* Theme Toggle Button Styles (Pill Switch) */
